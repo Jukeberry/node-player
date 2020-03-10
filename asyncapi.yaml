@@ -33,3 +33,15 @@ channels:
               type: string
               format: date-time
               description: Date and time when the message was sent.
+  stop/pushed: 
+    publish:
+      summary: Inform when the stop button was pushed
+      operationId: onStopPushed
+      message:
+        payload:
+          type: object
+          properties:
+            sentAt:
+              type: string
+              format: date-time
+              description: Date and time when the message was sent

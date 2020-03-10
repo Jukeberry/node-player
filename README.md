@@ -1,2 +1,4 @@
-# node-player
-A compatible player written in NodeJS reading MQTT. It would make any node running device, compatible with Jukeberry
+# Jukeberry
+
+Jukeberry lets you select music from a group of RFID cards and play it on any device listening the proper events
+

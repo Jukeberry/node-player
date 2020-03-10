@@ -1,0 +1,21 @@
+default:
+  app:
+    name: Jukeberry
+    version: 1.0.0
+
+  broker:
+    mqtt:
+      url: mqtt://localhost
+      topics: ["card/presented"]
+      qos:
+      protocol: mqtt
+      retain:
+      subscribe: true
+
+development:
+
+test:
+
+staging:
+
+production:
