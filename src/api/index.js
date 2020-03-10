@@ -9,6 +9,8 @@ const errorLogger = require('./middlewares/error-logger');
 const config = require('../lib/config');
 const MqttAdapter = require('hermesjs-mqtt');
 const cardPresented = require('./routes/card-presented.js');
+const stopPushed = require('./routes/stop-pushed.js');
+
 
 app.addAdapter(MqttAdapter, config.broker.mqtt);
 
@@ -18,6 +20,7 @@ app.use(logger);
 
 // Channels
 app.use(cardPresented);
+app.use(stopPushed);
 
 app.use(errorLogger);
 app.useOutbound(logger);

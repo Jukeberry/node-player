@@ -11,9 +11,8 @@
     "hermesjs": "2.x",
     "hermesjs-mqtt": "2.x",
     "hermesjs-router": "1.x",
-    "lame": "^1.2.4",
     "node-fetch": "^2.6.0",
     "node-yaml-config": "0.0.5",
-    "speaker": "^0.5.1"
+    "play-sound": "^1.1.3"
   }
 }

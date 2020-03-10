@@ -6,7 +6,7 @@ default:
   broker:
     mqtt:
       url: mqtt://localhost
-      topics: ["card/presented"]
+      topics: ["card/presented","stop/pushed/#"]
       qos:
       protocol: mqtt
       retain:

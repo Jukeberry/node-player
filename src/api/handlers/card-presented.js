@@ -1,8 +1,7 @@
 
 const handler = module.exports = {};
-var lame = require('lame');
-var fs = require('fs');
-var Speaker = require('speaker');
+const player = require("../../player/player.js")
+
 
 
 /**
@@ -28,15 +27,8 @@ handler.onCardPresented = async ({message}) => {
   var audio;
   if (song) {
     console.log("should play: " + song);
-    if (stream) stream.pause();
-    var stream = fs.createReadStream(song);
-    var decoder = new lame.Decoder();
-    var speaker;
-
-    stream.pipe(decoder).on('format', function(format) {
-        speaker = new Speaker(format);
-        this.pipe(speaker);
-    });
+    player.play(song)
+    
     
   } else {
     console.log("id not found in map");
