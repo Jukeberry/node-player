@@ -1,7 +1,7 @@
 {
   "name": "jukeberry-nodeclient",
   "description": "Jukeberry lets you select music from a group of RFID cards and play it on any device listening the proper events ",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "node src/api/index.js"
   },
