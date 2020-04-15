@@ -5,12 +5,13 @@ default:
 
   broker:
     mqtt:
-      url: mqtt://localhost
+      url: tcp://mr1nljqp0y1g2d.messaging.solace.cloud:21126
       topics: ["card/presented","stop/pushed/#"]
       qos:
       protocol: mqtt
       retain:
       subscribe: true
+      config: { username: "solace-cloud-client", password: "7ide7v7illr1fs4bsio3ls26f0"}
 
 development:
 
@@ -19,3 +20,4 @@ test:
 staging:
 
 production:
+

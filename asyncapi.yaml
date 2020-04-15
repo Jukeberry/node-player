@@ -10,7 +10,7 @@ info:
 
 servers:
   mosquitto:
-    url: mqtt://localhost
+    url: tcp://mr1nljqp0y1g2d.messaging.solace.cloud:21128
     protocol: mqtt
 
 channels:
