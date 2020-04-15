@@ -6,7 +6,7 @@ const player = require("../../player/player.js")
 
 /**
  * Inform when a card has been read
- * @param {object} options
+ * @param {object} options  
  * @param {object} options.message
  * @param {integer} options.message.payload.id - Id of read card.
  * @param {string} options.message.payload.text - The card might have any text description.
