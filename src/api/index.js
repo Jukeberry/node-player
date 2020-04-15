@@ -12,7 +12,6 @@ const cardPresented = require('./routes/card-presented.js');
 const stopPushed = require('./routes/stop-pushed.js');
 
 
-console.log(config.broker.mqtt)
 app.addAdapter(MqttAdapter, config.broker.mqtt);
 
 app.use(buffer2string);
@@ -30,10 +29,12 @@ app.useOutbound(json2string);
 app
   .listen()
   .then((adapters) => {
-    console.log(adapters)
     console.log(cyan.underline(`${config.app.name} ${config.app.version}`), gray('is ready!'), '\n');
     adapters.forEach(adapter => {
-      console.log('🔗 ', adapter.name(), gray('is connected!'));
+      console.log('🔗 ', adapter.name(), gray('is connected to '), config.broker.mqtt.url);
+      console.log('🙏 Solace for providing a great MQTT on the cloud')
+      console.log('🙏 Tamimi  from Solace for fixing authentication for the AsyncAPI generator for node.js. 🐦 Follow him: https://twitter.com/TweetTamimi')
+      console.log('🐦 Follow me for more of this! https://twitter.com/nohorbee')
     });
   })
   .catch(console.error);

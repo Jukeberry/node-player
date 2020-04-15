@@ -15,10 +15,9 @@ const player = require("../../player/player.js")
 handler.onCardPresented = async ({message}) => {
 
   var switcher = {
-    96675065265: "music/ParanoidAndroid.mp3",
+    96675065265: "music/Bodysnatchers.mp3",
     664003290249: "music/Creep.mp3",
-    649586696873: "music/HighAndDry.mp3",
-    711986787821: "music/BonfireHeart.mp3"
+    649586696873: "music/HighAndDry.mp3"
   }
 
   // Implement your business logic here...
@@ -26,12 +25,16 @@ handler.onCardPresented = async ({message}) => {
   var song = switcher[message.payload.id]
   var audio;
   if (song) {
-    console.log("should play: " + song);
+    console.log("\n")
+    console.log("Now Playing: " + song);
+    console.log("\n")
     player.play(song)
     
     
   } else {
-    console.log("id not found in map");
+    console.log("\n")
+    console.log("The id wasn't found or no song associated to it");
+    console.log("\n")
   }
     
 };

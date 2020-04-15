@@ -9,6 +9,8 @@ const player = require("../../player/player.js")
  * @param {string} options.message.payload.sentAt - Date and time when the message was sent
  */
 handler.onStopPushed = async ({message}) => {
-  // Implement your business logic here...
+  console.log("\n")
+  console.log("Stopping the currently playing song (if any)")
+  console.log("\n")
   player.stop();
 };

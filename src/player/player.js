@@ -15,7 +15,6 @@ player.play = function(songPath) {
 
 player.stop = function() {
     if (this.audio) {
-        console.log("tryingToStopa")
         this.audio.kill();
     }
         
