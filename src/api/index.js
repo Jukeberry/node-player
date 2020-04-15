@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const Hermes = require('hermesjs');
 const app = new Hermes();
 const { cyan, gray } = require('colors/safe');

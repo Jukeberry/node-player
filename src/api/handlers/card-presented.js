@@ -25,16 +25,13 @@ handler.onCardPresented = async ({message}) => {
   var song = switcher[message.payload.id]
   var audio;
   if (song) {
-    console.log("\n")
     console.log("Now Playing: " + song);
-    console.log("\n")
+    console.log(". . . ")
     player.play(song)
     
     
   } else {
-    console.log("\n")
-    console.log("The id wasn't found or no song associated to it");
-    console.log("\n")
+    console.log("\nThe id wasn't found or no song associated to it");
   }
     
 };
