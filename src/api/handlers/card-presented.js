@@ -1,6 +1,8 @@
 
 const handler = module.exports = {};
 const player = require("../../player/player.js")
+var path = require('path');
+
 
 
 
@@ -17,11 +19,10 @@ const player = require("../../player/player.js")
 
 handler.onCardPresented = async ({message}) => {
   var currentFolder = __dirname
-  console.log(currentFolder)
   var switcher = {
-    649586696873: "music/Bodysnatchers.mp3",
-    252470762881: "music/Creep.mp3",
-    735250948581: "music/HighAndDry.mp3"
+    649586696873: path.join("music", "Bodysnatchers.mp3"),
+    252470762881: path.join("music", "Creep.mp3"),
+    735250948581: path.join("music", "HighAndDry.mp3")
   }
 
   // Implement your business logic here...
