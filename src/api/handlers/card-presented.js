@@ -4,6 +4,7 @@ const player = require("../../player/player.js")
 
 
 
+
 /**
  * Inform when a card has been read
  * @param {object} options  
@@ -12,12 +13,15 @@ const player = require("../../player/player.js")
  * @param {string} options.message.payload.text - The card might have any text description.
  * @param {string} options.message.payload.sentAt - Date and time when the message was sent.
  */
-handler.onCardPresented = async ({message}) => {
 
+
+handler.onCardPresented = async ({message}) => {
+  var currentFolder = __dirname
+  console.log(currentFolder)
   var switcher = {
-    96675065265: "music/Bodysnatchers.mp3",
-    664003290249: "music/Creep.mp3",
-    649586696873: "music/HighAndDry.mp3"
+    649586696873: "music/Bodysnatchers.mp3",
+    252470762881: "music/Creep.mp3",
+    735250948581: "music/HighAndDry.mp3"
   }
 
   // Implement your business logic here...
